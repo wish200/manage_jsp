@@ -264,7 +264,7 @@ $("#status").val("${appHuibenBaseDto.status }");
                      <th>绘画图片：</th>
                      <td colspan="3">
 	                    <span id='filespan1' >
-	                    <img hspace='2' vspace='2' border='1' align='middle' height='100' width='100'  src="${ctx}${appHuibenBaseDto.picbookurl }" onclick="selectForward(this)"  />
+	                    <img hspace='2' vspace='2' border='1' align='middle' height='100' width='100'  src="${appHuibenBaseDto.picbookurl }" onclick="selectForward(this)"  />
 	                    </span>
                      </td>
                   </tr>

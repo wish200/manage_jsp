@@ -97,7 +97,7 @@ $("#status").val("${appAudioHuibenBaseDto.status }");
                      <th>用户头像图片：</th>
                      <td colspan="3">
 	                    <span id='filespan3' >
-	                    <img id="userpicimg" hspace='2' vspace='2' border='1' align='middle' height='100' width='100'  src="${ctx}${appAudioHuibenBaseDto.userpic }"   onclick="selectForward(this)"/>
+	                    <img id="userpicimg" hspace='2' vspace='2' border='1' align='middle' height='100' width='100'  src="${appAudioHuibenBaseDto.userpic }"   onclick="selectForward(this)"/>
 	                    </span>
                      </td>
                   </tr> 

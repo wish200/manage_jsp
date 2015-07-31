@@ -201,7 +201,7 @@ function returnc(){
 	                    <span class="filebtn"> <input type="button" value="上传" onclick="fileUpload('1','picbookurl','pic')"></span>
 	                    <span style="color:red" >*</span>
 	                    <span><img src="${ctx }/images/loading.gif" id="loading1" style="display: none;"></span>
-	                    原图：<input type="checkbox" id="isorigin1" name="isorigin1" >
+	                    	原图：<input type="checkbox" id="isorigin1" name="isorigin1" >
 	                    <input id="picbookurl" type="hidden" name="appPicbookBaseDto.picbookurl" >
                      </td>
                   </tr>

@@ -183,10 +183,10 @@ $("#picbookstatus").val("${appPicbookBaseDto.picbookstatus }");
 	                    <span class="filebtn"> <input type="button" value="上传" onclick="fileUpload('1','picbookurl','pic')"></span>
 	                    <span style="color:red" >*</span>
 	                    <span><img src="${ctx }/images/loading.gif" id="loading1" style="display: none;"></span>
-	                    原图：<input type="checkbox" id="isorigin1" name="isorigin1" >
+	                 	   原图：<input type="checkbox" id="isorigin1" name="isorigin1" >
 	                    <input id="picbookurl" type="hidden" name="appPicbookBaseDto.picbookurl" value="${appPicbookBaseDto.picbookurl }" >
 	                    <span id='filespan1'>
-	                    <img hspace='2' vspace='2' border='1' align='middle' height='100' width='100'  src="${appPicbookBaseDto.picbookurl }" onclick="selectForward('${appPicbookBaseDto.picbookurl}')"  />
+	                    <img hspace='2' vspace='2' border='1' align='middle' height='100' width='100'  src="${appPicbookBaseDto.picbookurl }" onclick="selectForward(this)"  />
 	                    </span>
                      </td>
                   </tr>

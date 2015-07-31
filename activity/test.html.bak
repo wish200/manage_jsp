@@ -1,0 +1,49 @@
+
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="myCSS.css" />
+    <script type="text/javascript" src="js\introduce\WdatePicker.js"></script>
+	<script type="text/javascript">
+	  function getResult(){
+	  var condition="";
+	  var sfzh=document.getElementById("sfzh").value;
+	  var xm=document.getElementById("xm").value;
+	  var startTime=document.getElementById("startTime").value;
+	  var endTime=document.getElementById("endTime").value;
+	  if(!(sfzh==null||sfzh=="")){
+	 	condition+=" and sfzh ='"+sfzh+"'";
+	  }
+	    if(!(xm==null||xm=="")){
+	 	condition+=" and zdryxm ='"+xm+"'";
+	  }
+	  if(!(startTime==null||startTime=="")){
+	 	condition+=" and yjfbsj >=to_date('"+startTime+"','yyyy-MM-dd HH:mm:ss')";
+	  }
+	  if(!(endTime==null||endTime=="")){
+	 	condition+=" and yjfbsj <=to_date('"+endTime+"','yyyy-MM-dd HH:mm:ss')";
+	  } 
+	  alert(condition); 
+ }
+	</script>
+  </head>
+   
+  <body>
+<table width="98%"  height="98%" align="center" class="Table1" >
+  <tr height="10%">
+    <td align="center" > 姓名:
+      <input name="xm" id="xm" type="text" class="iput1" /> 
+       身份证号:<input name="sfzh" id="sfzh" type="text" class="iput1" value="" /> 
+       开始时间:<input name="startTime" id="startTime" type="text" class="iput1"  onFocus="WdatePicker()"  />
+       结束时间:<input name="endTime"   id="endTime" type="text" class="iput1"    onFocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'startTime\')}',maxDate:'%y-%M-%d %H:%m:%s'})"  />
+       &nbsp;&nbsp;&nbsp;
+       <input type="button" name="cx" onclick="getResult()" value="查询" />
+      </td>
+  </tr>
+  <tr>
+    <td><iframe height="100%" src="" id="result" width="100%"></iframe></td>
+   
+  </tr>
+</table>
+  </body>
+</html>
+

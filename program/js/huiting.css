@@ -1,0 +1,1615 @@
+/**====================Reset Css=======================**/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,form, button, input, textarea, p,th, td {
+    margin: 0;
+    padding: 0;
+}
+body{
+    color:#474747;
+    background: #efeeeb;
+}
+body,button,input,select,textarea,table{
+    font: 12px/18px Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+p,ul,ol,li{
+    list-style:none;
+    text-align: left;
+}
+input, img {
+    vertical-align: middle;
+}
+/** == ClearFix == **/
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear:both;
+}
+.clearfix {
+    zoom: 1;
+}
+.clear{
+    clear:both;
+}
+.clearFloatNoHeight{
+    clear: both;
+    line-height: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    width: 0;
+    font-size:0;
+}
+/**====================Base Css=======================**/
+a{
+    color:#474747;
+}
+img{
+    border: 0;
+}
+a,input,textarea,img  {
+    outline:none;
+}
+a:link, a:visited, a:focus {
+    outline: medium none;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+:focus{
+    -moz-outline-style: none;
+    text-decoration: none;
+    outline: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.displayNone{
+    display: none;
+}
+.vMiddle{
+    vertical-align: middle;
+}
+.divider{
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #c8c4b4;
+}
+/**====================Font style=======================**/
+.bold{
+    font-weight: bold;
+}
+.textCenter{
+    text-align: center;
+}
+.fontYaHei{
+    font-family:  "Microsoft YaHei","微软雅黑";
+}
+.loadingBar{
+	position: absolute;
+	top: 50%;
+	left: 50%
+}
+/**========================弹窗========================**/
+.sdialogMask{display:none;position:absolute;top:0;left:0;background-color:#2d2b27;filter:alpha(opacity=50);-moz-opacity:.50;opacity:0.50;border-width:0px;z-index:199;height:0;overflow: hidden;}#loadingDiv,.loadingDiv{font-weight:bold;font-size:20px;font-style:italic;color:#999;width:200px;letter-spacing:.5;margin:0 auto;padding:10px 0}#loadingDiv span,.loadingDiv span{display:table-cell;_display:inline;zoom:1;vertical-align:middle;margin:0px;line-height:40px}#loadingDiv img,.loadingDiv img{padding-right:10px;margin:0px}.sdialog .sdialogTop{position:relative;overflow:hidden;height:8px;font-size:0;line-height:0}.sdialog .sdialogTopL,.sdialog .sdialogTopR{height:8px;background:url(/images/sdialog/dialogBg.png) no-repeat 7px 0;margin-right:17px;overflow:hidden;font-size:0;line-height:0}.sdialog .sdialogTopR{width:17px;height:15px;background-position:right 0;margin-right:0;position:absolute;top:0px;right:0px;_right:1px}.sdialog .sdialogContent{background:url(/images/sdialog/dialogBorder.png) repeat-y right 0;margin-left:15px;padding:0 8px 0 0}.sdialog .sdialogInner{background:url(/images/sdialog/dialogBorder.png) repeat-y 6px 0;margin-left:-15px;padding:10px 0 10px 15px;*zoom:1}.sdialog .sdialogBtm{height:8px;font-size:0;line-height:0;overflow:hidden;position:relative}.sdialog .sdialogBtmL,.sdialog .sdialogBtmR{height:8px;background:url(/images/sdialog/dialogBg.png) no-repeat 7px -35px;margin-right:17px;overflow:hidden;font-size:0;line-height:0}.sdialog .sdialogBtmR{width:17px;height:8px;background-position:right -35px;margin-right:0;position:absolute;top:0;right:0;_right:1px}.sdialog .closeBtn{background:url(/images/sdialog/close.png) no-repeat 0 0;width:30px;height:29px;cursor:pointer;overflow:hidden;top:-5px;right:-2px;position:absolute}.sdialog .closeBtn:hover{background-position:0 -30px}.wxDialog .sdialogTopL,.wxDialog .sdialogTopR{background:url(/images/sdialog/wx_dialogBg.png) no-repeat 0 0}.wxDialog .sdialogTopR{background-position:right 0}.wxDialog .sdialogBtmL,.wxDialog .sdialogBtmR{background:url(/images/sdialog/wx_dialogBg.png) no-repeat 0 -10px}.wxDialog .sdialogBtmR{background-position:right -10px}.wxDialog .sdialogContent{margin-left:0;padding:0;background:#fdfbf4}.wxDialog .sdialogInner{margin-left:0;padding:0;background:#fdfbf4}.wxDialog .closeBtn,.wxDialog .closeBtn:hover{background:url(/images/playerImgs.png) no-repeat right -120px;width:17px;height:17px;display:inline-block;cursor:pointer;overflow:hidden;top:12px;right:13px;position:absolute}
+/*微信朋友圈弹窗*/
+.wxDialog {
+    color: #867f6f;
+}
+.wxDialog .title{
+    background:#edeadc;
+    font-size: 14px;
+    padding:3px 10px 11px 16px;
+    border-bottom: 1px solid #dad7cb;
+}
+.wxDialog .text{
+    font-size: 13px;
+    padding: 0 10px 24px 22px;
+}
+#qrcode {
+    margin: 0 auto;
+    padding: 21px 0 20px 0;
+    width: 110px;
+    height: 110px;
+}
+/*下载弹窗*/
+.appDownContent{
+    padding: 10px 0 0 15px;
+    font-size: 14px;
+    line-height: 26px;
+}
+.appDownContent a {
+    color: #5A8DCD;
+}
+.appDownContent .dot{
+    font-family: "宋体","Microsoft YaHei","微软雅黑",tahoma,arial,simsun;
+}
+.androidcode, .ioscode , .ipadcode{
+    height: 135px;
+    margin: 5px 0 0 4px;
+    padding-bottom: 5px;
+    text-indent: -9999px;
+    width: 135px;
+}
+.ipadcode{
+    background: url("/images/ipadcode.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.androidcode{
+    background: url("/images/androidcode.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.ioscode {
+    background: url("/images/ioscode.png?2015041602") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+/**====================Scroll Bar=======================**/
+.jspContainer{
+    overflow: hidden;
+    position: relative;
+}
+.jspPane{
+    position: absolute;
+}
+.jspVerticalBar{
+    position: absolute;
+    right:262px;
+    width:9px;
+    top: 0;
+    line-height: 0;
+}
+.jspVerticalBar *,
+.jspHorizontalBar *{
+    margin: 0;
+    padding: 0;
+}
+.jspCap{
+    display: none;
+}
+.jspTrack{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #e8e7e3;
+    display: none;
+}
+.mainScroll:hover .jspTrack{
+	display: block;
+}
+.jspDrag{
+    position: absolute;
+    width:5px;
+    left:2px;
+    background: #c9c6ba;
+}
+.jspDrag .jspDragTop,
+.jspDrag .jspDragBottom {
+    background:#edeadf url(/images/scrollBg.png?v=0.10) no-repeat -10px 0;
+    width: 5px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.jspDrag .jspDragBottom {
+    background-position: -10px -3px;
+    top: auto;
+    bottom:0;
+}
+/**====================分页=======================**/
+.page{
+	padding:20px 0 30px 0;
+	font-size: 14px;
+	line-height: 14px;
+}
+.page a{
+	font-size: 14px;
+	line-height: 14px;
+	color: #a39f8d;
+	margin-left: 14px;
+}
+.page a:hover{
+	color: #867f6f
+}
+.page .current{
+	background: #f0bf58;
+	color: #fff;
+	display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 14px;
+    min-width: 16px;
+    text-align: center;
+}
+.page .prev.current,
+.page .next.current{
+	background: none;
+	font-size: 14px;
+	line-height: 14px;
+	color: #a39f8d;
+	margin-left: 14px;
+}
+.page .prev:hover,
+.page .next:hover{
+	color: #867f6f;
+}
+.page .prev i,
+.page .next i{
+	background: url(/images/siteIcon.png?v=0.10) right 0 no-repeat;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.page .prev:hover i{
+	background-position: right -20px;
+}
+.page .next i{
+	background-position: right -40px;
+}
+.page .next:hover i{
+	background-position: right -60px;
+}
+/**====================header=======================**/
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+.wrap{
+    width: 100%;
+    height:auto;
+    min-height: 100%;
+    _height: 100%;
+    *min-height:auto;
+    _min-height:auto;
+    *height:auto;  /*IE7*/
+    _height:auto;  /*IE6*/
+    position: relative;
+    min-width: 960px;
+}
+.indexMask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	display: block;
+	background: #fff;
+}
+/*=========================左侧菜单===================================*/
+.leftNav{
+	width:89px;
+	background:url(/images/leftShadowBg.png?v=0.10)right 0 repeat-y;
+	padding-right: 5px;
+	height: 100%;
+	left:0;
+	top:0;
+	z-index: 10;
+	position: fixed;
+	_position:absolute;
+}
+.leftNav .logo{
+	padding: 11px 0 0 15px;	
+}
+.leftNav .content,
+.playerSlide .content{
+	background: #f9f8f3;
+    height: 100%;
+    position: relative;
+}
+.leftNav ul{
+	padding: 26px 0 0 0px;
+}
+.leftNav .icon{
+	background:url(/images/leftIcon.png?v=0.10) no-repeat;
+	width: 90px;
+	height: 75px;
+	display: inline-block;	
+	margin-bottom: 5px;
+}
+.leftNav .search:hover{
+	background-position: 0 -80px;
+}
+.leftNav .explore{
+	background-position: 0 -160px;
+}
+.leftNav .explore:hover{
+	background-position: 0 -240px;
+}
+.leftNav .nj{
+	background-position: 0 -320px;
+}
+.leftNav .nj:hover{
+	background-position: 0 -400px;
+}
+.leftNav .app{
+	background-position: 0 -480px;
+}
+.leftNav .app:hover{
+	background-position: 0 -560px;
+}
+/*================右侧播放器模块=================*/
+.playerSlide{
+	width:260px;
+	background:url(/images/rightShadowBg.png?v=0.10)left 0 repeat-y;
+	padding-left: 5px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	position: fixed;
+	_position:absolute;
+}
+/*播放右侧显示控制块*/
+.myRadio{
+	width: 202px;
+	padding: 12px 20px 0 29px;
+	color: #867f6f;
+}
+.myRadio .radioCover{
+	width: 202px;
+	height: 202px;
+	overflow: hidden;
+}
+.myRadio .radioCover img{
+	max-width: 202px;
+}
+.myRadio .audioInfo{
+	padding: 8px 0 1px 0;
+	display: block;
+	color: #867F6F;
+	text-decoration: none;
+}
+.myRadio .radioName{
+	font-size: 14px;
+	line-height: 24px;
+	width: 200px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;	
+}
+.myRadio .audioName{
+	color: #a39f8d;
+	width: 200px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.controlArea{
+    width: 202px;
+    padding-top:14px;
+}
+.progressBar{
+    background:#d3d1c3 ;
+    height:3px;
+    width:200px;
+    margin:9px 0 0 1px;
+    position: relative;
+    cursor: pointer;
+}
+.progressBar .ui-slider-range,
+.loadBar{
+    background:#bcb8a6;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+.progressBar .ui-slider-handle{
+	background: url(/images/siteIcon.png?v=0.10) no-repeat -60px -60px;
+	width: 14px;
+	margin-left: -7px;
+	height: 17px;
+	display: block;
+	position: absolute;
+    left: 0;
+    z-index: 3;
+    top: -6px;
+}
+.progressBar .ui-slider-handle:hover{
+	background-position: -90px -60px;
+}
+.loadBar{
+    background:#ffffff;
+    z-index: 1;
+}
+.playOption{
+    text-align: right;
+    padding:3px 1px 0 0;
+}
+.playOption span,
+.playOption i{
+    vertical-align: top;
+}
+.restTime{
+    color:#867f6f;
+    padding-right: 5px;
+}
+.volume{
+    display: inline-block;
+    height: 14px;
+    padding-top:6px;
+    margin-right: -3px;
+}
+.volumeIco{
+    background:url(/images/playerImgs.png?v=0.3) no-repeat right 0;
+    width: 16px;
+    height: 14px;
+    display: inline-block;
+    cursor: pointer;
+}
+.volumeIco:hover,
+.volumeIco:active{
+    background-position: right -20px;
+}
+.voiceControl {
+    width: 0px;
+    overflow:hidden;
+    display:inline-block;
+}
+.voiceControl .inner{
+    background-color: #b0ac9b;
+    border-color: #d9d6c4;
+    border-style: solid;
+    border-width: 4px 3px;
+    width:41px;
+    display:block;
+    margin: 1px 3px 0 2px;
+    height:4px;
+    cursor:pointer;
+    text-align: left;
+}
+.voiceControl .ui-slider-range{
+    background:#fff;
+    height: 4px;
+}
+/* 功能按键 */
+.controlBtns{
+    padding-top:30px;
+}
+.searchFmBtn,
+.playNext,
+.playBtn,
+.listBtn,
+.singleListBtn,
+.moreBtn,
+.searchFmBtn i{
+    background:url(/images/playerImgs.png?v=0.3) no-repeat  0 0;
+    width:21px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 39px;
+    float: left;
+}
+.searchFmBtn{
+	position: relative;
+}
+.searchFmBtn i{
+	background-position: -180px 0;
+	width: 45px;
+	height: 28px;
+	position: absolute;
+	top: -33px;
+	left: -12px;
+	display: none;	
+}
+.searchFmBtn:hover i{
+	display: block;
+}
+.searchFmBtn:hover{
+	background-position: 0 -50px;
+}
+.playBtn{
+    background-position: -40px 0;
+}
+.playBtn:hover{
+    background-position: -40px -50px;
+}
+.pauseBtn{
+    background-position: -80px 0;
+}
+.pauseBtn:hover{
+    background-position: -80px -50px;
+}
+.playNext{
+    background-position: -120px 0px;
+}
+.playNext:hover{
+    background-position: -120px -50px;
+}
+.controlBtns a{
+    width: 21px;
+    height:21px;
+    display: block;
+}
+/*分享*/
+.shareBox{
+	float: left;
+	width:21px; 
+	height: 18px;
+	position: relative;
+	margin-top: 1px;
+}
+.shareSites{
+	background: url(/images/shareBg.png?v=0.10) 0 10px no-repeat;
+	width: 243px;
+	height: 72px;
+	position: absolute;	
+	right: -48px;
+	top: 10px;
+	padding: 35px 0 0 38px;
+	overflow: hidden;
+	display: none;
+}
+.shareBox:hover .shareSites{
+	display:block;
+}
+.shareSites a,
+.shareBtn{
+    background:url(/images/playerImgs.png?v=0.3) no-repeat;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    cursor: pointer;
+}
+.shareBtn{
+	width: 21px;
+	height: 18px;
+	background-position: right -50px;
+}
+.shareBtn:hover{
+    background-position: right -80px;
+}
+.shareSites .inner{
+    display: block;
+    width: 296px;
+}
+.shareSites a{
+    line-height: 10em;
+    margin: 9px 15px 0 0;
+    vertical-align: middle;
+}
+.shareSites a span{
+    background: none !important;
+    line-height: 10em !important;
+    font-size: 0 !important;
+}
+a.share_wx{
+    background-position: 0 -100px;
+}
+a.share_wx:hover{
+    background-position: 0 -130px;
+}
+a.share_sina{
+    background-position: -50px -100px;
+}
+a.share_sina:hover{
+    background-position: -50px -130px;
+}
+a.share_qzone{
+    background-position: -150px -100px;
+}
+a.share_qzone:hover{
+    background-position: -150px -130px;
+}
+a.share_qq{
+    background-position: -200px -100px;
+}
+a.share_qq:hover{
+    background-position: -200px -130px;
+}
+a.share_douban{
+    background-position: -100px -100px;
+}
+a.share_douban:hover{
+    background-position: -100px -130px;
+}
+a.share_renren{
+    background-position: -250px -100px;
+    margin-right: 0;
+}
+a.share_renren:hover{
+    background-position: -250px -130px;
+}
+.downloadText{
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+	color: #a39f8d;
+}
+.downloadText span{
+	color: #867f6f;
+	font-weight: bold;
+}
+.playerSlide .divider{
+	border-top:1px solid #e5e3d9;
+	margin: 15px 0;
+}
+/*底部*/
+.downloadLink{
+    width:234px;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+.iosDownBtn,
+.ipadDownBtn,
+.androidDownBtn,
+.winPhoneDownBtn{
+    background:url(/images/download-app-btn.png?v=0.3) no-repeat 0 0px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:10px;
+    width: 103px;
+    height:44px;
+    display: inline-block;
+    cursor: pointer;
+}
+.iosDownBtn{
+    background-position: 0px 0px;
+}
+.iosDownBtn:hover{
+    background-position: 0 -227px;
+}
+.iosDownBtn:active{
+    background-position: 0 -113px;
+}
+.androidDownBtn{
+    background-position: -119px 0px;
+}
+.androidDownBtn:hover{
+    background-position: -119px -227px;
+}
+.androidDownBtn:active{
+    background-position: -119px -113px;
+}
+.ipadDownBtn{
+    background-position: 0px -69px;
+}
+.ipadDownBtn:hover{
+    background-position: 0px -296px;
+}
+.ipadDownBtn:active{
+    background-position: 0px -182px;
+}
+.winPhoneDownBtn{
+    background-position: -119px -69px;
+}
+.winPhoneDownBtn:hover{
+    background-position: -119px -296px;
+}
+.winPhoneDownBtn:active{
+    background-position: -119px -182px;
+}
+/*===================main box==========================*/
+.mainBox{
+	padding: 20px 328px 30px 150px;
+	min-height: 450px;
+	position: relative;
+}
+/*首页左右滚动模块*/
+.carouseTitle{
+    font-size: 20px;
+    height: 27px;
+    line-height: 27px;
+    overflow: hidden;
+    color: #867f6f;
+    padding:0 0 4px 2px;
+}
+.carouseTitle .left a{
+	background: url(/images/crumbsArrow.png?v=0.10) no-repeat right 10px;
+	padding-right: 10px;
+	color: #867F6F;
+}
+.carouseTitle .left a.noArrow{
+	background: none;
+	padding-right: 0;
+}
+.carouseTitle .left .noArrow a{
+	background: none;
+	padding-right: 0;
+}
+.carouseTitle .left a.more{
+    color:#f7bd44;
+    font-size: 13px;
+    margin-left:15px;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+}
+.carouseTitle .more:hover{
+    color:#e79d02
+}
+.jcarousel-control-prev,
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next,
+.jcarousel-control-next.inactive{
+    background: url(/images/siteIcon.png?v=0.10) no-repeat 0 -30px;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+.jcarousel-control-prev:hover{
+    background-position: 0 -60px;
+}
+.jcarousel-control-prev:active{
+	background-position: -80px -90px;
+}
+.jcarousel-control-prev.inactive,
+.jcarousel-control-prev.inactive:hover{
+    background-position: 0 0;
+    cursor: default;
+}
+.jcarousel-control-next{
+    background-position: -30px -30px;
+    margin-left: 12px;
+}
+.jcarousel-control-next:hover{
+    background-position: -30px -60px;
+}
+.jcarousel-control-next:active{
+    background-position: -80px -120px;
+}
+.jcarousel-control-next.inactive,
+.jcarousel-control-next.inactive:hover{
+    background-position:-30px 0px;
+    cursor: default;
+}
+.carouselBox{
+    padding: 16px 0 28px 0;
+    overflow: hidden;
+}
+.carouselBox ul{
+    position: relative;
+    width: 500px;
+    height: 228px;
+    overflow: hidden;
+    margin-left: -17px;
+}
+.carouselBox li{
+    width: 180px;
+    color: #867f6f;
+    font-size: 14px;
+    float: left;
+    margin-left: 17px;
+}
+.carouselBox li a{
+    text-decoration: none;
+    color:#867F6F;
+}
+.carouselBox .radioCover{
+    position: relative;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 7px;
+}
+.carousel .carouselBox .radioCover{
+	height: 180px;
+}
+.carouselBox .radioCover img{
+    max-width: 100%;
+    _width:180px;
+}
+.carouselBox .radioBand{
+    color: #fff;
+    font-family: helvetica;
+    position: absolute;
+    left: 11px;
+    bottom:12px;
+    z-index: 2;
+    font-size: 18px;
+}
+.carouselBox .radioBand i{
+    font-style: normal;
+    padding-left:2px;
+}
+.carouselBox .radioBandBg{
+    background-color: #000;
+    border-width: 0;
+    opacity: 0.5;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:44px;
+}
+.leftPlayBtn,
+.leftPauseBtn{
+    background: url(/images/siteIcon.png?v=0.10) no-repeat -60px 0px;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top:12px;
+    left: 11px;
+    display: none;
+    cursor: pointer;
+}
+.radioCover:hover .leftPlayBtn,
+.radioCover .leftPauseBtn{
+    display:block;
+}
+.leftPlayBtn:hover{
+    background-position: -60px -30px;
+}
+.leftPauseBtn{
+    background-position: -90px 0px;
+}
+.leftPauseBtn:hover{
+    background-position: -90px -30px;
+}
+.audioList .leftPlayBtn,
+.audioList .leftPauseBtn{
+    width: 33px;
+    height: 33px;
+    top:18px;
+    left: 19px;
+    display: block;
+    background-position: 0 -90px;
+}
+.audioList .leftPlayBtn:hover{
+	background-position: -40px -90px;
+}
+.audioList .leftPauseBtn{
+	background-position: 0px -130px;
+}
+.audioList .leftPauseBtn:hover{
+	background-position: -40px -130px;
+}
+.carouselBox .radioName,
+.carouselBox .radioAuthor{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.carouselBox .radioAuthor{
+    font-size:12px;
+    color:#a39f8d;
+    padding-top: 3px;
+}
+.carouselBox .radioAuthor span{
+    padding-left:2px;
+}
+.loadingText span{
+    background: url(/images/loadingPoint.gif?v=0.10) no-repeat right 15px;
+    color: #908878;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    padding-right: 25px;
+    width:85px;
+    line-height: 24px;
+    font-family: "Microsoft YaHei","微软雅黑";
+}
+.carouselBox .loadingText{
+    margin: 50px 0 0 0px;
+}
+/*标签 tag*/
+.tagTitle .right{
+    color: #b7b3a2;
+}
+.tagTitle a{
+    font-size: 14px;
+    color: #b7b3a2;
+    text-decoration: none;
+}
+.tagTitle a:hover,
+.tagTitle a.select{
+    color: #867f6f;
+}
+.tagTitle .splitLine{
+    background: #d1ccb7;
+    height: 13px;
+    overflow: hidden;
+    display: inline-block;
+    width: 1px;
+    margin: 0 15px 0 19px;
+}
+.tagTitle .splitLine.last{
+    background: #edeadf;
+    margin-left: 0;
+}
+#allRadioTag .tagName{
+	color: #B7B3A2;
+	font-size: 12px;
+	width: 30px;
+	padding: 4px 0 0 13px;	
+}
+#allRadioTag  li{
+    float: left;
+    width: 56px;
+    height: 31px;
+    margin:0 0 20px 18px;
+}
+#allRadioTag ul{
+    margin:20px 0 0 59px;
+}
+#allRadioTag li a{
+    background: url(/images/radioTagBg.png?v=0.10) no-repeat 0 -50px;
+    width: 56px;
+    height: 31px;
+    display: block;
+    color: #867f6f;
+    text-align: center;
+    line-height: 31px;
+    font-family: "Microsoft YaHei","微软雅黑";
+    text-decoration: none;
+}
+#allRadioTag  li a:hover{
+    background-position: -80px -50px;
+}
+#allRadioTag li a:active{
+	background-position: 0 -140px;
+}
+/*============热门，精选，标签电台列表=============*/
+.allRadioList{
+    margin-left: -17px;
+    padding-bottom: 5px;
+}
+.allRadioList li{
+    padding-bottom: 32px;
+}
+/*==================电台详细页===============*/
+.radioInfoBox{
+    color: #867f6f;
+    margin: 0 auto;
+    padding: 25px 55px;
+    min-width:550px;
+    max-width:847px;
+    _width: 847px;
+}
+.radioInfoBox .radioCover{
+    text-align: center;
+    width:323px;
+    height: 323px;
+}
+.radioInfoBox img{
+	max-width: 323px;
+	max-height: 323px;
+}
+.radioInfoBox .radioInfo{
+    margin-left: 370px;
+}
+.radioInfoBox .radioName{
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 0 11px 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.radioInfoBox .radioName .radioBand{
+    font-size: 18px;
+}
+.radioInfoBox .radioName span{
+    padding-right:10px;
+    vertical-align: middle;
+}
+.radioCnt .text{
+    display: inline-block;
+    min-width:36px;
+    padding:0 2px;
+    text-align: left;
+}
+.radioInfoBox .radioAttr{
+    padding-left: 3px;
+    font-size: 14px;
+}
+.radioInfoBox .radioAttr img{
+    width: 32px;
+    height: 32px;
+}
+.radioInfoBox .radioAttr .avatar{
+    width: 32px;
+    height: 32px;
+    position: relative;
+    display: inline-block;
+    margin: 0 3px;
+}
+.radioInfoBox .radioCnt{
+    padding-top: 21px;
+}
+.radioInfoBox .radioAttr .avatar span{
+    background: url(/images/leftThumbMask.png?v=0.10) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+}
+.radioInfoBox .radioAttr .right {
+    width: 145px;
+    text-align: right;
+    line-height: 42px;
+}
+.radioInfoBox .desc{
+	width: 100%;	
+	color: #908878;
+	font-size: 14px;
+	padding: 18px 0 0 3px;
+	position: relative;
+    word-break:break-all;
+    white-space: pre-line;
+}
+.radioInfoBox.audioInfoBox .desc{
+	padding: 0 0 20px 3px;
+}
+.radioInfoBox .desc .left{
+	width: 40px;
+	padding-left: 3px;
+}
+.radioInfoBox .desText{
+	margin-left: 48px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.audioInfoBox .toggleDesc{
+	background: url(/images/crumbsArrow.png?v=0.10) no-repeat right -84px;
+	padding-right: 20px;
+	font-size: 13.58px;
+	color: #beb9ad;
+	position: absolute;
+	right: 0;
+    top: 17px;
+    cursor: pointer;
+}
+.audioInfoBox .toggleDesc:hover{
+	background-position: right -114px;
+	text-decoration: underline;
+}
+.audioInfoBox .toggleDesc.on{
+	background-position: right -144px;	
+}
+.audioInfoBox .toggleDesc.on:hover{
+	background-position: right -174px;
+	text-decoration: underline;
+}
+.radioAttr .left{
+    width: 162px;
+    height:32px;
+    padding: 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.radioTagBox{
+    margin: 24px 0 0 -9px;
+}
+.radioTagBox .radioTag{
+    background: url(/images/radioTagBg.png?v=0.10) no-repeat  0 0 ;
+    display: inline-block;
+    height: 30px;
+    margin: 0 0 5px 8px;
+    padding-left: 16px;
+}
+.radioTagBox .radioTag:hover{
+	background-position: 0 -100px
+}
+.radioTagBox .radioTag b{
+    background: url(/images/radioTagBg.png?v=0.10) right 0 ;
+    color: #A39F8D;
+    display: inline-block;
+    font-weight: normal;
+    height: 30px;
+    min-width:37px;
+    text-align: center;
+    line-height: 30px;
+    padding-right:6px;
+}
+.radioTagBox .radioTag:hover b{
+	background: url(/images/radioTagBg.png?v=0.10) right -100px;	
+}
+.radioInfoBox .aduioCnt{
+	font-size: 18px;
+	padding: 30px 0 16px 4px;
+}
+.audioList{
+    width: 100%;
+    overflow: hidden;
+}
+.audioList li{
+    position:relative;
+}
+.audioList .audioInfoBtn{
+    position:absolute;
+    right: 8px;
+    top: 45px;
+}
+.audioList a{
+    padding: 19px 13px 12px 65px;
+    display: block;
+    position: relative;
+}
+.audioList li:nth-of-type(odd) a{
+	background:#ebe9e2;
+}
+.audioList li:nth-of-type(even) a{
+	background:#efeeeb;
+}
+.audioList li a:hover{
+    background: #e3e1d8;
+    text-decoration: none;
+}
+/*.audioList a.played{
+    background: url(/images/playerCurrent.gif) no-repeat 17px 23px;
+    padding-left: 36px;
+}*/
+.audioList .left{
+    width:650px;
+    overflow: hidden;
+}
+.audioInfoBox .audioList .left{
+    width:350px;
+}
+.audioList a.played .left{
+    width:235px;
+}
+.audioList .audioName{
+    color:#867f6f;
+    font-size: 16px;
+    height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.audioList .aduioTime{
+    color:#a7a7a7;
+    padding-top: 3px;
+}
+.audioList .duration{
+    color:#b2afaa;
+    padding-top: 2px;
+}
+/*========搜索==============*/
+.searchInput{
+	background: #f9f8f3;
+	border:1px solid #d7d4c5;
+	position: relative;
+	width: 297px;
+	height: 20px;
+	padding: 5px 10px 3px 10px;
+	margin-top: 20px;
+}
+#search{
+	background: #f9f8f3;
+	border: none;
+	color: #867f6f;
+	width:280px;
+}
+.searchBtn{
+	position: absolute;
+	background: url(/images/siteIcon.png?v=0.10) no-repeat right -90px;
+	width: 17px;
+	height: 18px;
+	display: inline-block;
+	cursor: pointer;
+	top: 5px;
+	right: 6px;
+}
+.searchTab{
+	width:138px;
+	height: 33px;
+	background: url(/images/siteIcon.png?v=0.10) no-repeat 0 -180px;
+	margin: 18px 0 0 10px;
+	font-size: 14px;
+}
+.searchTab a{
+	width: 69px;
+	height: 33px;
+	line-height: 30px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	color: #867F6F;
+}
+.searchTab .radioTab.selected{
+	background: url(/images/siteIcon.png?v=0.10) no-repeat 0 -220px;
+	width: 70px;
+	height: 33px;
+	margin-right: -1px;
+}
+.searchTab .audioTab.selected{
+	background: url(/images/siteIcon.png?v=0.10) no-repeat -69px -220px;
+	width: 70px;
+	height: 33px;
+	margin-left: -1px;
+}
+.searchAudio{
+	width: 100%;
+	padding: 20px 0;
+}
+.nodata{
+	font-size: 16px;
+	padding: 20px 0;
+}
+/*节目页*/
+.audioInfoBox{
+	padding-top: 20px;
+}
+.audioInfoBox .audioInfo{
+	float: left;
+	width: 510px;
+}
+.audioInfoBox .audioCover{
+	width:180px;	
+	height: 180px;
+	margin-top: 12px;
+	overflow: hidden;
+	text-align: right;
+}
+.audioInfoBox img{
+	max-width:180px;
+	max-height:180px;
+}
+.audioInfoBox .radioInfo{
+	margin-left: 342px
+}
+.audioInfoBox .radioAttr{
+	padding:17px 0 15px 0;
+	font-size: 12px;
+}
+.audioInfoBox .radioText{
+	padding: 13px 0 0 2px;
+}
+.audioInfoBox li a.playAudio{
+	background: none;
+	padding-left: 45px;
+}
+.audioInfoBox .playAudio .leftPlayBtn{
+	left: 0;
+	top: 24px;
+}
+.audioInfoBox .radioAttr .avatar{
+	margin-left: 0;
+}
+.audioInfoBox .aduioTime{
+	color:#a7a7a7;
+}
+.audioInfoBox .desText{
+	color: #979696;
+	font-size: 14px;
+	margin-left: 0;
+	padding: 15px 150px 0 0;
+}
+.shareAudio{
+	padding: 35px 0 15px 0px;
+}
+.shareAudio .icon{
+	background: url(/images/siteIcon.png?v=0.10) no-repeat right -120px;
+	width: 15px;
+	height: 14px;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 5px;
+}
+.shareAudio .shareSites{
+	background: none;
+    display: block;
+    height: 38px;
+    padding: 0;
+    position: static;
+    margin: -9px 0 0 10px;
+    width: 300px;
+}
+.shareAudio .shareSites a{
+	width: 32px;
+	height: 32px;
+	margin: 0 7px 0 0;
+}
+.shareAudio a.share_wx{
+	background-position: 0 -350px;
+}
+.shareAudio a.share_wx:hover{
+	background-position: 0 -390px;
+}
+.shareAudio a.share_sina{
+	background-position: -40px -350px;
+}
+.shareAudio a.share_sina:hover{
+	background-position: -40px -390px;
+}
+.shareAudio a.share_douban{
+	background-position: -80px -350px;
+}
+.shareAudio a.share_douban:hover{
+	background-position: -80px -390px;
+}
+.shareAudio a.share_qzone{
+	background-position: -120px -350px;
+}
+.shareAudio a.share_qzone:hover{
+	background-position: -120px -390px;
+}
+.shareAudio a.share_qq{
+	background-position: -160px -350px;
+}
+.shareAudio a.share_qq:hover{
+	background-position: -160px -390px;
+}
+.shareAudio a.share_renren{
+	background-position: -200px -350px;
+}
+.shareAudio a.share_renren:hover{
+	background-position: -200px -390px;
+}
+.audioLinkText{
+	font-size: 14px;
+	padding: 25px 0 50px 0;
+}
+.audioLinkText a{
+	color:#867f6f;
+	margin-bottom: 6px;
+}
+.recommendTitle{
+	font-size: 16px;
+	color: #867f6f;
+	padding: 6px 0;
+	margin-top: 20px;
+}
+.recommendTitle a{
+	color: #BEB9AD;
+	font-size: 12.8px;
+}
+.recommendTitle .right a{
+	background: url(/images/crumbsArrow.png?v=0.10) no-repeat right -27px;
+	padding-right: 26px;
+}
+.recommendTitle .right a:hover{
+	background-position: right -57px;
+}
+.recommendRadio{
+	margin-left: -41px;
+}
+.recommendRadio li{
+	margin-left: 41px;
+}
+.recommendRadio .radioCover{
+	width: 180px;
+	height: 180px;
+}
+.recommendRadio.carouselBox .radioName,
+.recommendRadio.carouselBox .radioAuthor{
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 0;
+}
+.recommendRadio.carouselBox .radioAuthor {
+    color: #A39F8D;
+    font-size: 12px;
+    padding-top: 3px;
+}
+/*===============footer=====================*/
+#footer{
+	padding: 20px 328px 30px 150px;	
+}
+#footer .left{
+	font-size: 11.6px;
+	color: #867f6f
+}
+#footer .right{
+	padding-top: 10px;
+}
+#footer .right a{
+	margin-left:5px;
+	font-size: 11.6px;
+	color: #867f6f;
+}
+.attentionUs{
+	padding: 24px 10px 16px 0;
+	font-size: 14px;
+	color: #867f6f;
+}
+.attentionUs .fontYaHei{
+	margin-right: 17px;
+}
+.attentionUs a{
+    background: url(/images/footer.png?v=0.10) no-repeat;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.attentionUs a:hover{
+    background-position: 0 -38px;
+}
+.attentionUs a.sina_weibo_ico{
+    background-position: -38px 0;
+}
+.attentionUs a.sina_weibo_ico:hover{
+    background-position: -38px -38px;
+}
+.attentionUs a.tx_weibo_ico{
+    background-position: -76px 0;
+}
+.attentionUs a.tx_weibo_ico:hover{
+    background-position: -76px -38px;
+}
+.attentionUs a.douban_ico{
+    background-position: -114px 0;
+}
+.attentionUs a.douban_ico:hover{
+    background-position: -114px -38px;;
+}
+.attentionUs a.renren_ico{
+    background-position: -152px 0;
+}
+.attentionUs a.renren_ico:hover{
+    background-position:-152px -38px;
+}
+.attentionUs .rollover{
+    width:160px;
+    height: 160px;
+    padding:12px 14px 24px;
+    background: url(/images/about/rollover.png) no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="images/about/rollover.png");
+    _background:none;
+    position:absolute;
+    top: -196px;
+    left: -32px;
+    cursor: default;
+    display: none;
+}
+/*首页专题*/
+.topicBox{
+	width: 847px;
+	height: 335px;
+	overflow: hidden;
+	padding-bottom: 45px;
+	margin: 0 auto;
+}
+.topicBox .prev,
+.topicBox .next{
+	background: url(/images/carousel.png) no-repeat;
+	width: 44px;
+	height: 69px;
+	display: inline-block;
+	position: absolute;
+	left: 150px;
+	top:130px;
+}
+.topicBox .next{
+	background-position:0 -70px; 
+	left: auto;
+	right: 328px;
+}
+.topicBox:hover .prev:hover{
+	background-position:-50px 0; 	
+}
+.topicBox:hover .next:hover{
+	background-position:-50px -70px; 	
+}
+.topicBox li{
+	float: left;
+	width:847px;
+	height: 323px;
+	text-align: center;
+}
+.topicPager{
+	text-align: center;
+	width:847px;
+	margin-top: 6px;
+}
+.topicPager a{
+	background: url(/images/carousel.png) no-repeat 0 -140px;
+	width: 6px;
+	height: 6px;
+	display: inline-block;
+	overflow: hidden;
+    line-height: 50px;
+    margin-right: 7px;
+}
+.topicPager a.selected{
+	background-position: -10px -140px;
+}
+.topicAudio{
+	width: 847px;
+	padding: 25px 55px;
+}
+.topicAudio .topicBanner,
+.topicRadios .topicBanner{
+	width: 847px;
+	height: 323px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.topicAudio .desc,
+.topicRadios .desc{
+	color: #867f6f;
+    font-size: 14px;
+    padding: 25px 0 35px;
+}
+.topicAudio .desText,
+.topicRadios .desText{
+    margin-left: 0;
+    padding-right: 0;
+    line-height: 30px;
+}
+.topicAudio .topicBanner img{
+	max-width: 847px;
+}
+.topicRadios{
+	padding: 25px 0;	
+}
+.pageNotFoundBox{
+	width: 847px;
+	margin:  0 auto;
+	padding: 0;
+}
+.pageNotFound{
+	background: url(/images/404Bg.png) no-repeat 167px 0;
+	padding: 257px 0  97px 50px;
+	font-size: 24px;
+	color: #867f6f;
+	width: 650px;
+	line-height: 42px;
+	margin: 50px 0 48px 50px;
+	text-align: center;
+}
+.friendlyLink{
+	color: #867f6f;	
+	padding: 20px 0 0 0;
+	display: none;
+}
+.friendlyLink a{
+	color: #867f6f;	
+}
+.qq-feedback{
+    padding: 0px 10px 16px 0;
+    font-size: 14px;
+    color: #867f6f;
+}
+.qq-feedback .fontYaHei{
+    margin-right: 17px;
+}
+.qq-feedback .gray{
+    color:#e5e3d9;
+}
+.qq-feedback-icon:hover{
+    text-decoration:none;
+}
+.qq-feedback-icon{
+    font-size: 12px;
+    text-decoration:none;
+    color: #867f6f;
+    background: url(/images/qq_feedback.png) no-repeat;
+    padding-left:27px;
+    height: 21px;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .leftNav .icon{
+        background-image:url(/images/leftIcon.2x.png?v=0.10);
+        background-size:90px 650px ;
+    }
+}

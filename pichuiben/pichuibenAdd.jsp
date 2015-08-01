@@ -183,7 +183,7 @@ function returnc(){
 			               $('input[name="appPicHuibenBaseDto.audioname"]').val(data.audioname);
 			               $('input[name="appPicHuibenBaseDto.audiourl"]').val(data.audiourl);
 			               $('input[name="appPicHuibenBaseDto.audiolength"]').val(data.audiolength);
-			               $('input[name="appPicHuibenBaseDto.audiocontent"]').val(data.audiocontent);
+			               $('textarea[name="appPicHuibenBaseDto.audiocontent"]').val(data.audiocontent);
 			               
 			          }
 			  });
@@ -198,7 +198,7 @@ function returnc(){
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;自说自话-绘本信息</th>
+                      <th>&nbsp;&nbsp;看图说话-绘本信息</th>
                     </tr>
                   </table>
                 </div>

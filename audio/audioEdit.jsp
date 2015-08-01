@@ -102,7 +102,26 @@ function returnc(){
 	});
 }
 
- 
+ function changeuser(e){
+    	var userid1 = e.value;
+    	if(userid1==''){
+    		alert("用户id不能为空");
+    		return;
+    	}
+    	$.ajax({
+			          type : 'post',  
+			          url : '${ctx}/audio/audio_changeuser.do', 
+			          data:{userid:userid1},
+			          error: function(XmlHttpRequest, textStatus, errorThrown){  
+			               alert( "获取用户信息错误");  
+			          },
+			          success: function(data){ 
+			          		
+			               //$("#huibenForm").find('input,select,textarea').attr('disabled',true);
+			               $('input[name="appAudioBaseDto.nickname"]').val(data.nickname);
+			          }
+			  });
+    }
 
 $("#audiosource").val("${appAudioBaseDto.audiosource }");
 $("#audiostatus").val("${appAudioBaseDto.audiostatus }");
@@ -135,14 +154,14 @@ $("#audiostatus").val("${appAudioBaseDto.audiostatus }");
                     </td>
                   </tr>
                   <tr>
-                    <th>所属用户名称：</th>
+                    <th>所属用户ID：</th>
                     <td>
-		               <input id="userid" name="appAudioBaseDto.userid" type="text" value="${appAudioBaseDto.userid }"/>
+		               <input id="userid" name="appAudioBaseDto.userid" type="text" value="${appAudioBaseDto.userid }" onchange="changeuser(this)"/>
 		               <span style="color:red">*</span>
                     </td>
                     <th>用户昵称：</th>
                     <td>
-                      <input id="nickname" name="appAudioBaseDto.nickname" type="text" value="${appAudioBaseDto.nickname }"/>
+                      <input id="nickname" name="appAudioBaseDto.nickname" type="text" value="${appAudioBaseDto.nickname }" />
                        <span style="color:red">*</span>
                     </td>
                   </tr>

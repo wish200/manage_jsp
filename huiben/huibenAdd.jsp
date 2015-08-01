@@ -131,7 +131,6 @@ function returnc(){
 			               alert( "获取用户信息错误");  
 			          },
 			          success: function(data){ 
-			          		
 			               //$("#huibenForm").find('input,select,textarea').attr('disabled',true);
 			               $('input[name="appHuibenBaseDto.nickname"]').val(data.nickname);
 			               $('input[name="appHuibenBaseDto.userpic"]').val(data.userpic);
@@ -183,7 +182,7 @@ function returnc(){
 			               $('input[name="appHuibenBaseDto.audioname"]').val(data.audioname);
 			               $('input[name="appHuibenBaseDto.audiourl"]').val(data.audiourl);
 			               $('input[name="appHuibenBaseDto.audiolength"]').val(data.audiolength);
-			               $('input[name="appHuibenBaseDto.audiocontent"]').val(data.audiocontent);
+			               $('textarea[name="appHuibenBaseDto.audiocontent"]').val(data.audiocontent);
 			               
 			          }
 			  });

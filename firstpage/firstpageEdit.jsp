@@ -112,7 +112,7 @@ $("#status").val("${appFirstPageBaseDto.status }");
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;评论信息</th>
+                      <th>&nbsp;&nbsp;启动页图片信息</th>
                     </tr>
                   </table>
                 </div>

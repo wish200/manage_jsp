@@ -170,7 +170,7 @@ function returnc(){
 			               $('input[name="appAudioHuibenBaseDto.audioname"]').val(data.audioname);
 			               $('input[name="appAudioHuibenBaseDto.audiourl"]').val(data.audiourl);
 			               $('input[name="appAudioHuibenBaseDto.audiolength"]').val(data.audiolength);
-			               $('input[name="appAudioHuibenBaseDto.audiocontent"]').val(data.audiocontent);
+			               $('textarea[name="appAudioHuibenBaseDto.audiocontent"]').val(data.audiocontent);
 			               
 			          }
 			  });
@@ -185,7 +185,7 @@ $("#status").val("${appAudioHuibenBaseDto.status }");
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;节目信息</th>
+                      <th>&nbsp;&nbsp;绘本信息</th>
                     </tr>
                   </table>
                 </div>

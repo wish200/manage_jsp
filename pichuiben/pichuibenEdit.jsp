@@ -169,7 +169,7 @@ function returnc(){
 			               $('input[name="appPicHuibenBaseDto.audioname"]').val(data.audioname);
 			               $('input[name="appPicHuibenBaseDto.audiourl"]').val(data.audiourl);
 			               $('input[name="appPicHuibenBaseDto.audiolength"]').val(data.audiolength);
-			               $('input[name="appPicHuibenBaseDto.audiocontent"]').val(data.audiocontent);
+			               $('textarea[name="appPicHuibenBaseDto.audiocontent"]').val(data.audiocontent);
 			               
 			          }
 			  });

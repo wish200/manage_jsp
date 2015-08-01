@@ -94,6 +94,27 @@ function returnc(){
 }
 
 
+ function changeuser(e){
+    	var userid1 = e.value;
+    	if(userid1==''){
+    		alert("用户id不能为空");
+    		return;
+    	}
+    	$.ajax({
+			          type : 'post',  
+			          url : '${ctx}/flower/flower_changeuser.do', 
+			          data:{userid:userid1},
+			          error: function(XmlHttpRequest, textStatus, errorThrown){  
+			               alert( "获取用户信息错误");  
+			          },
+			          success: function(data){ 
+			          		
+			               //$("#huibenForm").find('input,select,textarea').attr('disabled',true);
+			               $('input[name="appFlowerBaseDto.nickname"]').val(data.nickname);
+			          }
+			  });
+    }
+
 </script>
 </div>
 
@@ -113,7 +134,7 @@ function returnc(){
                   <tr>
                     <th>评论用户：</th>
                     <td>
-		               <input id="userid" name="appFlowerBaseDto.userid" type="text" />
+		               <input id="userid" name="appFlowerBaseDto.userid" type="text" onchange="changeuser(this)"/>
 		               <span style="color:red">*</span>
                     </td>
                     <th>用户昵称：</th>

@@ -103,7 +103,26 @@ function returnc(){
 	});
 }
 
-
+function changeuser(e){
+    	var userid1 = e.value;
+    	if(userid1==''){
+    		alert("用户id不能为空");
+    		return;
+    	}
+    	$.ajax({
+			          type : 'post',  
+			          url : '${ctx}/picbook/picbook_changeuser.do', 
+			          data:{userid:userid1},
+			          error: function(XmlHttpRequest, textStatus, errorThrown){  
+			               alert( "获取用户信息错误");  
+			          },
+			          success: function(data){ 
+			          		
+			               //$("#huibenForm").find('input,select,textarea').attr('disabled',true);
+			               $('input[name="appPicbookBaseDto.nickname"]').val(data.nickname);
+			          }
+			  });
+    }
 
 
 $("#picbooksource").val("${appPicbookBaseDto.picbooksource }");
@@ -116,7 +135,7 @@ $("#picbookstatus").val("${appPicbookBaseDto.picbookstatus }");
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;绘画信息</th>
+                      <th>&nbsp;&nbsp;绘图信息</th>
                     </tr>
                   </table>
                 </div>
@@ -125,7 +144,7 @@ $("#picbookstatus").val("${appPicbookBaseDto.picbookstatus }");
 				<input id="picbook" name="appPicbookBaseDto.picbookid" value="${appPicbookBaseDto.picbookid }" type="hidden" />  
                 <table class="school_task ostyle">
                   <tr>
-                    <th>绘画名称：</th>
+                    <th>绘图名称：</th>
                     <td>
 		               <input id="picbookname" name="appPicbookBaseDto.picbookname" value="${appPicbookBaseDto.picbookname }"  type="text"/>
 		               <span style="color:red">*</span>
@@ -137,9 +156,9 @@ $("#picbookstatus").val("${appPicbookBaseDto.picbookstatus }");
                     </td>
                   </tr>
                   <tr>
-                    <th>所属用户名称：</th>
+                    <th>所属用户ID：</th>
                     <td>
-		               <input id="userid" name="appPicbookBaseDto.userid" type="text" value="${appPicbookBaseDto.userid }"  />
+		               <input id="userid" name="appPicbookBaseDto.userid" type="text" value="${appPicbookBaseDto.userid }"  onchange="changeuser(this)"/>
 		               <span style="color:red">*</span>
                     </td>
                     <th>用户昵称：</th>

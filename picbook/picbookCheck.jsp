@@ -46,7 +46,7 @@ $("#picbookstatus").val("${appPicbookBaseDto.picbookstatus }");
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;绘画信息</th>
+                      <th>&nbsp;&nbsp;绘图信息</th>
                     </tr>
                   </table>
                 </div>
@@ -56,7 +56,7 @@ $("#picbookstatus").val("${appPicbookBaseDto.picbookstatus }");
 				    value="${appPicbookBaseDto.picbookid }" type="hidden" />
                 <table class="school_task">
                  <tr>
-                    <th style="width:120px">ID：</th>
+                    <th style="width:120px">绘图ID：</th>
                     <td colspan="3">
 		               ${appPicbookBaseDto.picbookid}
                     </td>

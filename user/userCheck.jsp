@@ -45,7 +45,7 @@ $("#sex").val("${appUserBaseDto.sex }");
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;公告信息</th>
+                      <th>&nbsp;&nbsp;用户信息</th>
                     </tr>
                   </table>
                 </div>

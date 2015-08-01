@@ -125,6 +125,27 @@ function returnc(){
 	});
 }
 
+function changeuser(e){
+    	var userid1 = e.value;
+    	if(userid1==''){
+    		alert("用户id不能为空");
+    		return;
+    	}
+    	$.ajax({
+			          type : 'post',  
+			          url : '${ctx}/picbook/picbook_changeuser.do', 
+			          data:{userid:userid1},
+			          error: function(XmlHttpRequest, textStatus, errorThrown){  
+			               alert( "获取用户信息错误");  
+			          },
+			          success: function(data){ 
+			          		
+			               //$("#huibenForm").find('input,select,textarea').attr('disabled',true);
+			               $('input[name="appPicbookBaseDto.nickname"]').val(data.nickname);
+			          }
+			  });
+    }
+    
 </script>
 </div>
 
@@ -133,7 +154,7 @@ function returnc(){
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;绘话信息</th>
+                      <th>&nbsp;&nbsp;绘图信息</th>
                     </tr>
                   </table>
                 </div>
@@ -155,9 +176,9 @@ function returnc(){
                     </td>
                   </tr>
                   <tr>
-                    <th>所属用户名称：</th>
+                    <th>所属用户ID：</th>
                     <td>
-		               <input id="userid" name="appPicbookBaseDto.userid" type="text"/>
+		               <input id="userid" name="appPicbookBaseDto.userid" type="text"  onchange="changeuser(this)"/>
 		               <span style="color:red">*</span>
                     </td>
                     <th>用户昵称：</th>
@@ -195,7 +216,7 @@ function returnc(){
                    
                   </tr>
                    <tr>
-                     <th>节目头像图片：</th>
+                     <th>图片：</th>
                      <td colspan="3">
                     	<input type="file" name="Filedata1" id="Filedata1"  style="width:50%; border:#cccccc solid 1px;padding: 7px 5px;"/>
 	                    <span class="filebtn"> <input type="button" value="上传" onclick="fileUpload('1','picbookurl','pic')"></span>

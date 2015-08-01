@@ -182,7 +182,7 @@ function returnc(){
 			               $('input[name="appAudioHuibenBaseDto.audioname"]').val(data.audioname);
 			               $('input[name="appAudioHuibenBaseDto.audiourl"]').val(data.audiourl);
 			               $('input[name="appAudioHuibenBaseDto.audiolength"]').val(data.audiolength);
-			               $('input[name="appAudioHuibenBaseDto.audiocontent"]').val(data.audiocontent);
+			               $('textarea[name="appAudioHuibenBaseDto.audiocontent"]').val(data.audiocontent);
 			               
 			          }
 			  });

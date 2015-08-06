@@ -158,9 +158,9 @@ $("#sort").val("${appProgramBaseDto.sort}");
                     </td>
                     <th>小红花数量：</th>
                     <td>
-		               <input id="flowercnt" name="appProgramBaseDto.flowercnt" value="${appProgramBaseDto.flowercnt}" type="text"/>
+		               <!--<input id="flowercnt" name="appProgramBaseDto.flowercnt" value="${appProgramBaseDto.flowercnt}" type="text"/>
 		               <span style="color:red">*</span>
-                    </td>
+                    --></td>
                   </tr>
                   <tr>
                     <th>发布时间：</th>

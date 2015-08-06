@@ -139,10 +139,10 @@ function returnc(){
 		               <span style="color:red">*</span>
                     </td>
                   </tr>
-                  <tr>
-                    <th>节目数量：</th>
+                  <!--<tr>
+                    <th>小红花数量：</th>
                     <td>
-		               <input id="programcnt" name="appChannelBaseDto.programcnt" type="text"/>
+		               <input id="flowercnt" name="appChannelBaseDto.flowercnt" type="text"/>
 		               <span style="color:red">*</span>
                     </td>
                     <th>粉丝数量：</th>
@@ -151,12 +151,13 @@ function returnc(){
 		               <span style="color:red">*</span>
                     </td>
                   </tr>
-                  <tr>
-                    <th>小红花数量：</th>
-                    <td>
-		               <input id="flowercnt" name="appChannelBaseDto.flowercnt" type="text"/>
-		               <span style="color:red">*</span>
-                    </td>
+                  --><tr>
+	                  <th>节目数量：</th>
+	                    <td>
+			               <input id="programcnt" name="appChannelBaseDto.programcnt" type="text"/>
+			               <span style="color:red">*</span>
+	                    </td>
+                    
                     <th>优先级：</th>
                     <td>
 		                <select id="sort" class="selector" name="appChannelBaseDto.sort">

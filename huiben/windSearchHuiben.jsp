@@ -22,7 +22,7 @@ function Query(){
 	+"&searchDto.audioid="+$("input[name='searchDto.audioid']").val()
 	+"&searchDto.audioname="+$("input[name='searchDto.audioname']").val()
 	+"&searchDto.userid="+$("input[name='searchDto.userid']").val()
-	+"&searchDto.nickname="+$("input[name='searchDto.nickname']").val();
+	+"&searchDto.validstate="+$("input[name='searchDto.validstate']").val();
 	
 	$("#queryForm").ajaxSubmit({
         type : 'post',  
@@ -92,9 +92,13 @@ function Reset(){
                 </span>
             </li>
             <li>
-            	<label>用户昵称：</label>
-                <span class="input_1">
-                <input name="searchDto.nickname" type="text" />
+            	<label>状态：</label>
+                <span >
+               		 <select id="validstate" class="selector" name="searchDto.validstate">
+                    	<option value="">全部</option>
+                    	<option value="0">无效</option>
+                    	<option value="1" selected>有效</option>
+                     </select>
                 </span>
             </li>
             <li class="press_button" style="position:absolute;bottom:35px">

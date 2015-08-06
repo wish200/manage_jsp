@@ -18,9 +18,10 @@ function Query(){
     }
     publicURL="${ctx}/picbook/picbook_getList.do?searchDto.picbookid="+$("input[name='searchDto.picbookid']").val()
 	+"&searchDto.picbookname="+$("input[name='searchDto.picbookname']").val()
-	+"&searchDto.picbooktime="+$("input[name='searchDto.picbooktime']").val()
-	+"&searchDto.validstatus="+$("input[name='searchDto.validstatus']").val()
-	+"&searchDto.picbooktype="+$("input[name='searchDto.picbooktype']").val();
+	+"&searchDto.userid="+$("input[name='searchDto.userid']").val()
+	+"&searchDto.startdate="+$("input[name='searchDto.startdate']").val()
+	+"&searchDto.enddate="+$("input[name='searchDto.enddate']").val()
+	+"&searchDto.validstate="+$("input[name='searchDto.validstate']").val();
 	
 	$("#queryForm").ajaxSubmit({
         type : 'post',  
@@ -54,27 +55,43 @@ function Reset(){
         <form id="queryForm" action="" method="post">
         <ul>
             <li>
-            	<label>活动编号：</label>
+            	<label>绘图编号：</label>
                 <span class="input_1">
                 <input name="searchDto.picbookid" type="text" />
                 </span>
             </li>
             <li>
-            	<label>活动名称：</label>
+            	<label>绘图名称：</label>
                 <span class="input_1">
                 <input name="searchDto.picbookname" type="text" />
                 </span>
             </li>
             <li>
-            	<label>活动类型：</label>
+            	<label>用户ID：</label>
                 <span class="input_1">
-                <input name="searchDto.picbooktype" type="text" />
+                <input name="searchDto.userid" type="text" />
                 </span>
             </li>
             <li>
-            	<label>发布日期：</label>
+            	<label>状态：</label>
+                <span >
+               		 <select id="validstate" class="selector" name="searchDto.validstate">
+                    	<option value="">全部</option>
+                    	<option value="0">无效</option>
+                    	<option value="1" selected>有效</option>
+                     </select>
+                </span>
+            </li>
+            <li>
+            	<label>起始时间：</label>
                 <span class="input_1"  >
-                <input name="searchDto.picbooktime"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
+                <input name="searchDto.startdate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
+                </span>
+            </li>
+            <li>
+            	<label>终止时间：</label>
+                <span class="input_1"  >
+                <input name="searchDto.enddate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
                 </span>
             </li>
             <li class="press_button" style="position:absolute;bottom:35px">

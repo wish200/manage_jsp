@@ -16,8 +16,10 @@ function Query(){
     if(returnUrlNotice!=''){
         ajaxUrlNotice+='?searchDto.returnUrl='+returnUrlNotice;
     }
-    publicURL="${ctx}/firstpage/firstpage_getList.do?searchDto.firstpageid="+$("input[name='searchDto.firstpageid']").val()
-	+"&searchDto.firstpagename="+$("input[name='searchDto.firstpagename']").val();
+    publicURL="${ctx}/firstpage/firstpage_getList.do?searchDto.id="+$("input[name='searchDto.id']").val()	
+	+"&searchDto.startdate="+$("input[name='searchDto.startdate']").val()
+	+"&searchDto.enddate="+$("input[name='searchDto.enddate']").val()
+	+"&searchDto.validstate="+$("input[name='searchDto.validstate']").val();
 	
 	$("#queryForm").ajaxSubmit({
         type : 'post',  
@@ -54,6 +56,28 @@ function Reset(){
             	<label>编号：</label>
                 <span class="input_1">
                 <input name="searchDto.id" type="text" />
+                </span>
+            </li>
+            <li>
+            	<label>状态：</label>
+                <span >
+               		 <select id="validstate" class="selector" name="searchDto.validstate">
+                    	<option value="">全部</option>
+                    	<option value="0">无效</option>
+                    	<option value="1" selected>有效</option>
+                     </select>
+                </span>
+            </li>
+            <li>
+            	<label>起始时间：</label>
+                <span class="input_1"  >
+                <input name="searchDto.startdate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
+                </span>
+            </li>
+            <li>
+            	<label>终止时间：</label>
+                <span class="input_1"  >
+                <input name="searchDto.enddate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
                 </span>
             </li>
             <li class="press_button" style="position:absolute;bottom:35px">

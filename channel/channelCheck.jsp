@@ -78,17 +78,7 @@ $("#status").val("${appChannelBaseDto.status }");
                     <th style="width:120px">节目数量：</th>
                     <td >
 		               ${appChannelBaseDto.programcnt}
-                    </td>
-                    <th style="width:120px">粉丝数量：</th>
-                    <td>
-		               ${appChannelBaseDto.fanscnt}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th style="width:120px">小红花数量：</th>
-                    <td >
-		               ${appChannelBaseDto.flowercnt}
-                    </td>  
+                    </td> 
                     <th style="width:120px"></th>
                     <td >
 		               

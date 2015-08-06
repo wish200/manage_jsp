@@ -18,9 +18,9 @@ function Query(){
     }
     publicURL="${ctx}/activity/activity_getList.do?searchDto.activityid="+$("input[name='searchDto.activityid']").val()
 	+"&searchDto.activityname="+$("input[name='searchDto.activityname']").val()
-	+"&searchDto.activitytime="+$("input[name='searchDto.activitytime']").val()
-	+"&searchDto.validstatus="+$("input[name='searchDto.validstatus']").val()
-	+"&searchDto.activitytype="+$("input[name='searchDto.activitytype']").val();
+	+"&searchDto.startdate="+$("input[name='searchDto.startdate']").val()
+	+"&searchDto.enddate="+$("input[name='searchDto.enddate']").val()
+	+"&searchDto.validstate="+$("input[name='searchDto.validstate']").val();
 	
 	$("#queryForm").ajaxSubmit({
         type : 'post',  
@@ -66,15 +66,25 @@ function Reset(){
                 </span>
             </li>
             <li>
-            	<label>活动类型：</label>
-                <span class="input_1">
-                <input name="searchDto.activitytype" type="text" />
+            	<label>状态：</label>
+                <span >
+               		 <select id="validstate" class="selector" name="searchDto.validstate">
+                    	<option value="">全部</option>
+                    	<option value="0">无效</option>
+                    	<option value="1" selected>有效</option>
+                     </select>
                 </span>
             </li>
             <li>
-            	<label>发布日期：</label>
+            	<label>起始时间：</label>
                 <span class="input_1"  >
-                <input name="searchDto.activitytime"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
+                <input name="searchDto.startdate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
+                </span>
+            </li>
+            <li>
+            	<label>终止时间：</label>
+                <span class="input_1"  >
+                <input name="searchDto.enddate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
                 </span>
             </li>
             <li class="press_button" style="position:absolute;bottom:35px">

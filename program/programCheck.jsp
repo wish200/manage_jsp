@@ -80,10 +80,10 @@ $("#status").val("${appProgramBaseDto.status }");
                     <td >
 		               ${appProgramBaseDto.playcnt}
                     </td>
-                    <th style="width:120px">小红花数量：</th>
-                    <td >
+                    <th style="width:120px"></th>
+                    <td ><!--
 		               ${appProgramBaseDto.flowercnt}
-                    </td>  
+                    --></td>  
                   </tr>
                   
                   <tr>

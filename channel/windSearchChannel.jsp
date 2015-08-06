@@ -17,7 +17,8 @@ function Query(){
         ajaxUrlNotice+='?searchDto.returnUrl='+returnUrlNotice;
     }
     publicURL="${ctx}/channel/channel_getList.do?searchDto.channelid="+$("input[name='searchDto.channelid']").val()
-	+"&searchDto.channelname="+$("input[name='searchDto.channelname']").val();
+	+"&searchDto.channelname="+$("input[name='searchDto.channelname']").val()
+	+"&searchDto.validstate="+$("input[name='searchDto.validstate']").val();
 	
 	$("#queryForm").ajaxSubmit({
         type : 'post',  
@@ -60,6 +61,16 @@ function Reset(){
             	<label>活动名称：</label>
                 <span class="input_1">
                 <input name="searchDto.channelname" type="text" />
+                </span>
+            </li>
+            <li>
+            	<label>状态：</label>
+                <span >
+               		 <select id="validstate" class="selector" name="searchDto.validstate">
+                    	<option value="">全部</option>
+                    	<option value="0">无效</option>
+                    	<option value="1" selected>有效</option>
+                     </select>
                 </span>
             </li>
             <li class="press_button" style="position:absolute;bottom:35px">

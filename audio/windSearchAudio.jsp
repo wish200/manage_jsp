@@ -19,7 +19,9 @@ function Query(){
     publicURL="${ctx}/audio/audio_getList.do?searchDto.audioid="+$("input[name='searchDto.audioid']").val()
 	+"&searchDto.audioname="+$("input[name='searchDto.audioname']").val()
 	+"&searchDto.userid="+$("input[name='searchDto.userid']").val()
-	+"&searchDto.nickname="+$("input[name='searchDto.nickname']").val();
+	+"&searchDto.startdate="+$("input[name='searchDto.startdate']").val()
+	+"&searchDto.enddate="+$("input[name='searchDto.enddate']").val()
+	+"&searchDto.validstate="+$("input[name='searchDto.validstate']").val();
 	
 	$("#queryForm").ajaxSubmit({
         type : 'post',  
@@ -65,15 +67,31 @@ function Reset(){
                 </span>
             </li>
             <li>
-            	<label>所属用户：</label>
+            	<label>所属用户ID：</label>
                 <span class="input_1">
                 <input name="searchDto.userid" type="text" />
                 </span>
             </li>
             <li>
-            	<label>用户昵称：</label>
-                <span class="input_1">
-                <input name="searchDto.nickname" type="text" />
+            	<label>状态：</label>
+                <span >
+               		 <select id="validstate" class="selector" name="searchDto.validstate">
+                    	<option value="">全部</option>
+                    	<option value="0">无效</option>
+                    	<option value="1" selected>有效</option>
+                     </select>
+                </span>
+            </li>
+            <li>
+            	<label>起始时间：</label>
+                <span class="input_1"  >
+                <input name="searchDto.startdate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
+                </span>
+            </li>
+            <li>
+            	<label>终止时间：</label>
+                <span class="input_1"  >
+                <input name="searchDto.enddate"  type="text"  class="Wdate" onclick="WdatePicker({startDate:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/>'})">
                 </span>
             </li>
             

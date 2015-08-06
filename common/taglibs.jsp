@@ -27,6 +27,7 @@
 <script type="text/javascript" src="${ctx}/js/introduce/jquery.form.min.js"></script>
 <link href="${ctx}/style/style.css" rel="stylesheet" type="text/css" />
 <link href="${ctx}/style/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${ctx}/resource/js/WdatePicker.js"></script>
 
 
 

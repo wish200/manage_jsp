@@ -3,7 +3,6 @@
 
 <div><!--存放js-->
 <%@include file="/jsp/common/tempTaglibs.jsp"%>
-<script type="text/javascript" src="${ctx}/resource/js/WdatePicker.js"></script>
 <script type="text/javascript" src="${ctx}/js/introduce/ajaxfileupload.js"></script>
 <script type="text/javascript" src="${ctx}/js/common/app.js"></script>
 <script type="text/javascript">
@@ -171,7 +170,7 @@ function changeuser(e){
                     </td>
                     <th>发布时间：</th>
                     <td>
-                      <input id="uploadtime" class="Wdate"  onclick="WdatePicker({uploadtime:'<fmt:formatDate value="${now}" pattern="yyyy-MM-dd hh:mm:ss"/>'})" name="appPicbookBaseDto.uploadtime" type="text" />
+                      <input id="uploadtime" class="Wdate" name="appPicbookBaseDto.uploadtime" type="text"  value="<fmt:formatDate value="${now}" pattern="yyyy-MM-dd HH:mm:ss"/>" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
                        <span style="color:red">*</span>
                     </td>
                   </tr>

@@ -145,6 +145,28 @@ function returnc(){
 			          }
 			  });
     }
+    
+   function changeprogram(e){
+    	var id1 = e.value;
+    	if(id1==''){
+    		alert("节目ID不能为空");
+    		return;
+    	}
+    	$.ajax({
+			          type : 'post',  
+			          url : '${ctx}/audio/audio_changeprogram.do', 
+			          data:{programid:id1},
+			          error: function(XmlHttpRequest, textStatus, errorThrown){  
+			               alert( "获取用户信息错误");  
+			          },
+			          success: function(data){ 
+			          		
+			               //$("#huibenForm").find('input,select,textarea').attr('disabled',true);
+			               $('input[name="appAudioBaseDto.programurl"]').val(data.programurl);
+			               
+			          }
+			  });
+    }
  
 </script>
 </div>
@@ -239,6 +261,25 @@ function returnc(){
 	                    <input id="backgoundpic" type="hidden" name="appAudioBaseDto.backgoundpic" >
                      </td>
                   </tr>
+                  
+                  <tr>
+                    <th>完整节目ID：</th>
+                    <td>
+                    	<input id="programid" name="appAudioBaseDto.programid" type="text" onchange="changeprogram(this)"/>
+                    </td>
+                   <th></th>
+                    <td>
+                    	
+                    </td>
+                  </tr>
+                  <tr>
+                     <th>节目地址：</th>
+	                  <td colspan="3">
+	                    <input id="programurl" type="text"  style="width:80%;"  readonly="readonly" name="appAudioBaseDto.programurl" 
+	                    onclick="selectForward1('${ctx}/jsp/program/play.jsp?name='+$('#programid').val()+'&path='+$(this).val())"/>
+                      </td>
+                  </tr>
+                  
                   <tr class="height_70">
                     <th>内容：</th>
                     <td colspan="3"><textarea style="height:300px;position:relative;float:left" id="audiocontent" name="appAudioBaseDto.audiocontent"></textarea>

@@ -290,7 +290,7 @@ $("#status").val("${appPicHuibenBaseDto.status }");
                     <th>绘音地址：</th>
                      <td colspan="3">
 	                    <input id="audiourl" type="text" style="width:80%;" readonly="readonly" name="appPicHuibenBaseDto.audiourl"  value="${appPicHuibenBaseDto.audiourl }"
-	                    onclick="selectForward1('${ctx}/jsp/program/play.jsp?name=${appPicHuibenBaseDto.audiourl }&path=${appPicHuibenBaseDto.audiourl }')"/>
+	                    onclick="selectForward1('${ctx}/jsp/program/play.jsp?name='+$('#audioname').val()+'&path='+$(this).val())"/>
                      </td>
                      
                   </tr>

@@ -171,7 +171,7 @@ function returnc(){
                      <th>电台标识图片：</th>
                      <td colspan="3">
                     	<input type="file" name="Filedata1" id="Filedata1"  style="width:50%; border:#cccccc solid 1px;padding: 7px 5px;"/>
-	                    <span class="filebtn"> <input type="button" value="上传" onclick="fileUpload('1','channelpic','pic')"></span>
+	                    <span class="filebtn"> <input type="button" value="上传" onclick="fileUpload('1','channelpic','pic');"></span>
 	                    <span style="color:red" >*</span>
 	                    <span><img src="${ctx }/images/loading.gif" id="loading1" style="display: none;"></span>
 	                    原图：<input type="checkbox" id="isorigin1" name="isorigin1" >

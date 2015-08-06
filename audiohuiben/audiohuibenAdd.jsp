@@ -303,7 +303,7 @@ function returnc(){
                     <th>绘音地址：</th>
                      <td colspan="3">
 	                    <input id="audiourl" type="text"  style="width:80%;"  readonly="readonly" name="appAudioHuibenBaseDto.audiourl" 
-	                    onclick="selectForward1('${ctx}/jsp/program/play.jsp?name=${appAudioHuibenBaseDto.audiourl }&path=${appAudioHuibenBaseDto.audiourl }')"/>
+	                    onclick="selectForward1('${ctx}/jsp/program/play.jsp?name='+$('#audioname').val()+'&path='+$(this).val())"/>
                      </td>
                   </tr>
                   <tr class="height_70">

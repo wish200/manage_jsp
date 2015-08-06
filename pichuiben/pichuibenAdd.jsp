@@ -3,10 +3,12 @@
 
 <div><!--存放js-->
 <%@include file="/jsp/common/tempTaglibs.jsp"%>
-<script type="text/javascript" src="${ctx}/resource/js/WdatePicker.js"></script>
 <script type="text/javascript" src="${ctx}/js/introduce/ajaxfileupload.js"></script>
-<script type="text/javascript" src="${ctx}/js/common/app.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="/htmanage/js/common/app.js"></script>
+
+<script type="text/javascript"> 
+
+
 Date.prototype.pattern=function(fmt) {           
     var o = {           
     "M+" : this.getMonth()+1, //月份           
@@ -182,8 +184,8 @@ function returnc(){
 			               //$("#pichuibenForm").find('input,select,textarea').attr('disabled',true);
 			               $('input[name="appPicHuibenBaseDto.audioname"]').val(data.audioname);
 			               $('input[name="appPicHuibenBaseDto.audiourl"]').val(data.audiourl);
-			               $('input[name="appPicHuibenBaseDto.audiolength"]').val(data.audiolength);
-			               $('textarea[name="appPicHuibenBaseDto.audiocontent"]').val(data.audiocontent);
+			               $('textarea[name="appPicHuibenBaseDto.audiolength"]').val(data.audiolength);
+			               $('input[name="appPicHuibenBaseDto.audiocontent"]').val(data.audiocontent);
 			               
 			          }
 			  });
@@ -198,7 +200,7 @@ function returnc(){
                 <div class="form_tit">
                   <table>
                     <tr>
-                      <th>&nbsp;&nbsp;看图说话-绘本信息</th>
+                      <th>&nbsp;&nbsp;自说自话-绘本信息</th>
                     </tr>
                   </table>
                 </div>
@@ -303,8 +305,8 @@ function returnc(){
                   <tr>
                     <th>绘音地址：</th>
                      <td colspan="3">
-	                    <input id="audiourl" type="text"  style="width:80%;"  readonly="readonly" name="appPicHuibenBaseDto.audiourl" 
-	                    onclick="selectForward1('${ctx}/jsp/program/play.jsp?name=${appPicHuibenBaseDto.audiourl }&path=${appPicHuibenBaseDto.audiourl }')"/>
+	                    <input id="audiourl" type="text"  style="width:80%;"  readonly name="appPicHuibenBaseDto.audiourl" 
+	                    onclick="selectForward1('${ctx}/jsp/program/play.jsp?name='+$('#audioname').val()+'&path='+$(this).val())"/>
                      </td>
                   </tr>
                   <tr class="height_70">
@@ -323,3 +325,4 @@ function returnc(){
                   </div>
                 </div>
             </div>
+            

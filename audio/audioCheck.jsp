@@ -129,6 +129,22 @@ $("#audiostatus").val("${appAudioBaseDto.audiostatus }");
 	                    </span>
                      </td>
                   </tr>
+                  <tr>
+                  	<th>完整节目ID：</th>
+                     <td> ${appAudioBaseDto.programid }
+                     </td>
+                     <th></th>
+                     <td>	                     
+                     </td>
+                  </tr>
+                  <tr>
+                  	 <th>完整节目地址：</th>
+                     <td colspan="3">
+	                    <span id='filespan3' onclick="selectForward1('${ctx}/jsp/program/play.jsp?name=${appAudioBaseDto.programid }&path=${appAudioBaseDto.programurl }')">
+	                     ${appAudioBaseDto.programurl } 
+	                    </span>
+                     </td>
+                  </tr>
                   
                   <tr class="height_70">
                     <th style="width:120px">内容：</th>
